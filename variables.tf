@@ -4,7 +4,7 @@ variable "aws_region" {
 }
 variable "vpc_id" {
   type   = string
-  default = "vpc-04e7963fb00fe63f6"
+  default = "vpc-07399171ca20f1ca7"
 }
 
 variable "key_name" {

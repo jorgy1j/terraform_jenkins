@@ -9,7 +9,7 @@ variable "vpc_id" {
 
 variable "key_name" {
   type   = string
-  default = "olawale"
+  default = "terraformkey"
 }
 variable "ports" {
   type    = list(number)
@@ -24,5 +24,5 @@ variable "cidr_block" {
 
 variable "ami"{
     type = string
-      default = "ami-0d94353f7bad10668"
+      default = "ami-081b0a6eac00b4f53"
 }

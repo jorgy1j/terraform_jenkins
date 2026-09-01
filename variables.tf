@@ -1,10 +1,10 @@
 variable "aws_region" {
   type   = string
-  default = "us-east-1"
+  default = "us-east-2"
 }
 variable "vpc_id" {
   type   = string
-  default = "vpc-07399171ca20f1ca7"
+  default = "vpc-033a164eeac74345f"
 }
 
 variable "key_name" {
@@ -24,5 +24,5 @@ variable "cidr_block" {
 
 variable "ami"{
     type = string
-      default = "ami-081b0a6eac00b4f53"
+      default = "ami-01c265752adadcdf8"
 }

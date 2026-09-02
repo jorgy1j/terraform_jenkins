@@ -8,7 +8,7 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 sudo yum upgrade -y
 
 #install java, git and nodejs
-sudo dnf install java-17-amazon-corretto-devel -y
+sudo dnf install -y java-21-amazon-corretto
 sudo yum install git -y
 sudo yum install nodejs npm -y
 

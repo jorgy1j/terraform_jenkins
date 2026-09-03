@@ -1,0 +1,33 @@
+
+//Prometeus is on port 9090 and grafana is on port 
+
+helm repo add stable http://chart.helm.sh/stable
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+
+//create namespace APM OR MONITORING
+//Install prometeus/grafana in the namespace
+helm install prometheus-stack/stable prometheus-community/kube-prometheus-stack -n (monitoring/apm)
+
+//verify po using
+kubectl get pods -n monitoring... for svc we use kubctl get svc -nmonitoring
+
+//THEN.... edit the svc with the name stable-kube-promeatus-sta-prometeus to loadbalancer
+ kubectl edit svc stable-kube-promeatus-sta-prometeus -n monitoring.
+
+                                     GRAFANA
+//we also edit the svc file for our grafana and replace to loadbalancer.
+kubectl edit svc stable-grafana -n monitoring
+
+//check the svc to see the loadbalancer for both grafana and prometeus
+To log into the grafana we use username and password
+username ..admin
+password.. prom-operator
+
+1st is to add data source
+select prometeus
+enter the prometeus url which is the loadbalancer or a record 
+click save and test
+go to dashboard and click on create or new and click import
+imput the grafana unique id 6417 on the space to load and click load
+select data source which is the prometeus1 and click import
